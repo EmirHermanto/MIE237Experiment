@@ -1,5 +1,7 @@
 package backend;
 
+import java.awt.Image;
+
 public class Answer {
 	String userName;
 	Image image;
@@ -8,15 +10,15 @@ public class Answer {
 	
 	public Answer() {
 		userName = new String();
-		image = new Image();
 		fractionCorrect = 0f;
 		timeTaken = 0l;
 	}
 	
-	public Answer(String name, Image image, float fractionCorrect, long timeTaken ) {
+	public Answer(String name, Picture picture, float fractionCorrect, long timeTaken ) {
 		this.userName = name;
-		this.image = image;
 		this.fractionCorrect = fractionCorrect;
 		this.timeTaken = timeTaken;
+		
+		//generate an Image object from picture class.
 	}
 }

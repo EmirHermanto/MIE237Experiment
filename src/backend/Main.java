@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class Main {
 	static String userName;
-	static ArrayList<Image> images = new ArrayList<>();
+	static ArrayList<Picture> pictures = new ArrayList<>();
 	static ArrayList<Answer> answers = new ArrayList<>();
 	
 	public static void main(String[] args) throws IOException {
@@ -17,17 +17,18 @@ public class Main {
 		// Screen 1: Show user instructions
 		// check for user confirmation
 		
-		while(!images.isEmpty()) {
-			answers.add(imageTest(userName));
+		while(!pictures.isEmpty()) {
+			answers.add(PictureTest(userName));
 		}
 
 	}
 
 	public static void init() {
-		//Fills images with the images of the typos
+		//Fills Pictures with the Pictures of the typos
+		
 	}
 	
-	public static Answer imageTest(String userName) throws IOException{
+	public static Answer PictureTest(String userName) throws IOException{
 		Boolean on = true;
 		int typosGuessed = 0;
 		long timeTaken = 0l;
@@ -52,12 +53,12 @@ public class Main {
 			
 			//TODO:Generate the randomNo.
 			int randomNo = 0;
-			//retrieves image and removes that image from remainingImages.
-			Image test = images.get(randomNo);
-			images.remove(randomNo);
+			//retrieves Picture and removes that Picture from remainingPictures.
+			Picture test = pictures.get(randomNo);
+			pictures.remove(randomNo);
 
 			//Starts the test for the current user
-			//TODO: Output the image
+			//TODO: Output the Picture
 			Long startTime = System.currentTimeMillis();
 			System.out.println("What is your typo guess: ");
 			while(on) {
